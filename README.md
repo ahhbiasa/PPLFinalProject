@@ -9,10 +9,10 @@
 
 <div align="center">
 
-| Name    | NRP     |
-|---------|---------|
-| xxxxxxx | xxxxxx  |
-| xxxxxxx | xxxxxx  |
+| Name                    | NRP        |
+|-------------------------|------------|
+| Muhammad Abhyasa Santoso | 5025221066 |
+| Tabina Callistadya        | 5025221318 |
 
 </div>
 
