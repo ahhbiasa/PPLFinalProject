@@ -20,6 +20,16 @@
 <hr>
 
 # Project Overview
+**UCollabs** is a web-based collaboration platform developed for students at Universiti Teknologi Petronas (UTP). It allows students to connect, post projects, and find suitable teammates for academic or creative work. Our final project simulates core functionality such as posting collaboration requests and sending real-time notifications.
+
+  <p align="center">
+    <img src="./UCollabs_Logo.png" alt="UCollabs" width="300"/>
+  </p>
+
+To support this functionality in a clean, scalable way, we have applied two software design patterns:
+
+- **Observer Pattern** – for handling real-time updates and notifications.
+- **Command Pattern** – for encapsulating user actions like sending messages or submitting join requests.
 
 # Observer Pattern
 
