@@ -32,8 +32,14 @@ To support this functionality in a clean, scalable way, we have applied two soft
 - **Command Pattern** – for encapsulating user actions like sending messages or submitting join requests.
 
 # Observer Pattern
+<p align="center">
+  <img src="https://refactoring.guru/images/patterns/content/observer/observer-2x.png" width="400">
+</p>
 
-## Explanation
+The **Observer Design Pattern** is a behavioral design pattern that creates a one-to-many object dependency. As the state of the Subject (or Observable) is altered, all its Observers are notified and updated automatically. This pattern is ideal when multiple objects need to react to changes in another object without tightly coupling them. Common in event-driven systems, GUIs, and real-time data feeds.
+
+
+## How it works
 
 ## Justification
 
@@ -44,3 +50,5 @@ To support this functionality in a clean, scalable way, we have applied two soft
 ## Justification
 
 # References
+🔗 [Observer Pattern – Refactoring.Guru](https://refactoring.guru/design-patterns/observer)
+
