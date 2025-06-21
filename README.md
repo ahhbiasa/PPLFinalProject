@@ -28,8 +28,8 @@
 
 To support this functionality in a clean, scalable way, we have applied two software design patterns:
 
-- **Observer Pattern** – for handling real-time updates and notifications.
-- **Command Pattern** – for encapsulating user actions like sending messages or submitting join requests.
+- [**Observer Pattern**](#observer-pattern) – for handling real-time updates and notifications.
+- [**Command Pattern**](#command-pattern) – for encapsulating user actions like sending messages or submitting join requests.
 
 # Observer Pattern
 <p align="center">
