@@ -120,6 +120,9 @@ This way:
 
 The Command Pattern acts as a smart middle layer between the user interface and the business logic — reducing direct connections and making the whole system easier to manage.
 
+## Implementation
+A simple Python prototype demonstrating the implementation of the Command Pattern can be found [here](https://github.com/ahhbiasa/PPLFinalProject/tree/main/ucollabs_command).
+
 ## How It Works
 
 # References
