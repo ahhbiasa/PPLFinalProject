@@ -72,9 +72,57 @@ To keep things clean and flexible, all subscribers follow the same interface. Th
 A simple Python prototype demonstrating the implementation of the Observer Pattern can be found [here](https://github.com/ahhbiasa/PPLFinalProject/tree/main/ucollabs_observer).
 
 # Command Pattern
+<p align="center">
+  <img src="https://refactoring.guru/images/patterns/content/command/command-en-2x.png" width="400">
+</p>
+
+The **Command Design Pattern** is a behavioral design pattern that wraps an action or request into its own object. This makes it possible to pass the request as an argument, delay when it gets executed, organize it in a queue, or even reverse the action through an undo feature. This pattern is especially helpful in UCollabs when implementing user actions that must be reversible, like joining or withdrawing from a project collaboration request before it is approved. 
+ 
+## The Problem
+Imagine, building one of the feature for UCollabs which is "Join a Project" where students can browse available projects and click a “Join” button to request collaboration. Later, the student might want to cancel that request before it gets accepted so they hit the "Cancel" button which refers to undo action.
+
+<p align="center">
+  <img src="https://refactoring.guru/images/patterns/diagrams/command/problem2-2x.png" width="400">
+</p>
+
+At first, you might think, “Easy! Just add the join and cancel logic directly to the button handler.” But then you realize, the same action (like joining a project) might be triggered from multiple places, maybe a button on the homepage, inside the project detail view, or even from a mobile version of the app if there's a mobile version later. 
+
+<p align="center">
+  <img src="https://refactoring.guru/images/patterns/diagrams/command/problem3-en-2x.png" width="400">
+</p>
+
+If you write the logic for joining in every button or page, you’re copying the same code everywhere. That’s messy and hard to maintain. Or, What if you want to add an undo feature? Or store a history of what users did?
+
+## Solution
+In good software design, it's important to keep different responsibilities separate. For example, separating the part of the system that handles how things look (the interface) from the part that actually does the work (the logic). The interface shouldn’t directly handle the logic for what happens when a user joins or cancels a project. Instead, the system should delegate that responsibility to a separate, reusable part of the code.
+
+<p align="center">
+  <img src="https://refactoring.guru/images/patterns/diagrams/command/solution1-en-2x.png" width="400">
+</p>
+
+This is where the Command Pattern helps. It allows us to wrap the “join project” action as a command object. This object knows how to execute (join the project) and undo (cancel the request). With the Command Pattern, every action a user takes like “join project” is turned into its own command object. This object knows exactly what to do (join) and how to undo it (cancel).
+
+<p align="center">
+  <img src="https://refactoring.guru/images/patterns/diagrams/command/solution2-en-2x.png" width="400">
+</p>
+
+The UI just calls the command, without needing to know the technical details of how the action is performed.
+
+<p align="center">
+  <img src="https://refactoring.guru/images/patterns/diagrams/command/solution3-en-2x.png" width="400">
+</p>
+
+This way:
+- The UI buttons don’t need to know how a project join works.
+- The join logic is reusable and testable on its own.
+- We can easily add undo functionality.
+- We avoid duplicating logic across different parts of the app (buttons, menus, etc.).
+
+The Command Pattern acts as a smart middle layer between the user interface and the business logic — reducing direct connections and making the whole system easier to manage.
 
 ## How It Works
 
 # References
 🔗 [Observer Pattern – Refactoring.Guru](https://refactoring.guru/design-patterns/observer)
+🔗 [Command Pattern – Refactoring.Guru](https://refactoring.guru/design-patterns/command)
 
