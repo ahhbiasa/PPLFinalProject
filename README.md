@@ -123,9 +123,8 @@ The Command Pattern acts as a smart middle layer between the user interface and 
 ## Implementation
 A simple Python prototype demonstrating the implementation of the Command Pattern can be found [here](https://github.com/ahhbiasa/PPLFinalProject/tree/main/ucollabs_command).
 
-## How It Works
-
 # References
 🔗 [Observer Pattern – Refactoring.Guru](https://refactoring.guru/design-patterns/observer)
+
 🔗 [Command Pattern – Refactoring.Guru](https://refactoring.guru/design-patterns/command)
 
